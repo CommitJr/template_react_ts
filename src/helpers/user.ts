@@ -1,5 +1,7 @@
 const getUserRole= (role:number):number => {
-
+    /**
+     * Logica
+     */
     return 0;
 }
 
