@@ -3,7 +3,11 @@ import { useStoreActions, useStoreState } from "../../store/hookStore";
 import { useHistory } from "react-router-dom";
 import { Button } from "@material-ui/core";
 
-function Couter(){
+interface Props{
+    //todas as propriedades de tipos aqui
+}
+
+const Couter:React.FC = () => {
     const counter = useStoreState((state)=>state.countStore.count);
     const setCounter= useStoreActions((actions)=>actions.countStore.setCount);
 
