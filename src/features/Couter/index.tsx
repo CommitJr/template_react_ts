@@ -6,6 +6,7 @@ import { Button } from "@material-ui/core";
 function Couter(){
     const counter = useStoreState((state)=>state.countStore.count);
     const setCounter= useStoreActions((actions)=>actions.countStore.setCount);
+
     const history = useHistory();
 
     const goBackToLogin = () => {
@@ -17,9 +18,17 @@ function Couter(){
             <h1>Contador</h1>
 
             <p>Valor do Contador: {counter}</p>
-            <Button variant="contained" color="primary" onClick={()=>setCounter(counter+1)}>+</Button>
-            <Button variant="contained" color="primary" onClick={()=>setCounter(0)}>RESET</Button>
-            <Button variant="contained" color="primary" onClick={()=>goBackToLogin()}>Back to login</Button>
+            <Button variant="contained" color="primary" onClick={
+                ()=>setCounter(counter+1)
+            }>+</Button>
+
+            <Button variant="contained" color="primary" onClick={
+                ()=>setCounter(0)
+            }>RESET</Button>
+
+            <Button variant="contained" color="primary" onClick={
+                ()=>goBackToLogin()
+            }>Back to login</Button>
         </>
     );
 }

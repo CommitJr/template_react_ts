@@ -9,7 +9,7 @@ const Router = () => {
             <Route path="/app" component={App} />
             <Route path="/login" component={Login} />
 
-            <Redirect from="/" to="/app" />
+            <Redirect from="/" to="/login" />
         </Switch>
     );
 
