@@ -7,7 +7,11 @@ interface Props{
     //todas as propriedades de tipos aqui
 }
 
-const Couter:React.FC = () => {
+/**
+ * React.FC = react functional component
+ */
+
+const Couter:React.FC<Props> = (props:Props) => {
     const counter = useStoreState((state)=>state.countStore.count);
     const setCounter= useStoreActions((actions)=>actions.countStore.setCount);
 
